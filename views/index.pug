@@ -1,0 +1,11 @@
+html 
+    head 
+        title New User
+    body 
+        h1 Create a new user:
+        form(action="/userlist" method="get")
+            input(type="text" name="name" placeholder="Name")
+            input(type="text" name="lastname" placeholder="Last Name")
+            input(type="text" name="email" placeholder="Email")
+            button(formmethod="post" type="submit") Submit
+        a(href="/userlist") User list

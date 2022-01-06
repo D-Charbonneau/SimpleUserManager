@@ -1,0 +1,12 @@
+html 
+    head 
+        title #{user.name}
+    body 
+        h1 Editing #{user.name}:
+        form(action="/" + user.id method="get")
+            input(type="text" name="name" placeholder="Name" value=user.name) 
+            input(type="text" name="lastname" placeholder="Last Name" value=user.lastname)
+            input(type="text" name="email" placeholder="Email" value=user.email)
+            button(formmethod="post" type="submit") Submit
+        a(href="/userlist") User list
+        a(href="/") New User

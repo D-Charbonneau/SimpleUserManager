@@ -1,0 +1,14 @@
+html 
+    head 
+        title User list 
+    body 
+        h1 User list: 
+        ol 
+            each user in userlist
+                li 
+                    ul 
+                        li Name:      #{user.name} 
+                        li Last name: #{user.lastname} 
+                        li Email:     #{user.email} 
+                    a(href=`/${user.id}`) edit
+        a(href="/") New User
